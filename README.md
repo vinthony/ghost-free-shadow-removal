@@ -1,0 +1,1 @@
+# ghost-free-shadow-removal
