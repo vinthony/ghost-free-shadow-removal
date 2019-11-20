@@ -54,6 +54,7 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 
 It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU are supported (But running on CPU is quite slow).
 
+OR an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
 
 ## **Training (TBD)**
