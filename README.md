@@ -6,7 +6,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 [Xiaodong Cun](vinthony.github.io), [Chi-Man Pun<sup>*</sup>](http://www.cis.umac.mo/~cmpun/), Cheng Shi <br>
 [University of Macau](http://um.edu.mo/)
 
-[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | Paper | Supp. | Poster | [Online Comparsion]()
+[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | Paper | Supp. | Poster | Online Comparsion
 
 ![remove_detail](https://user-images.githubusercontent.com/4397546/69003615-582b2180-0940-11ea-9faa-2f2ae6b1d5ba.png)
 
