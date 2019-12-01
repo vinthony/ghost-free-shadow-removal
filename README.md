@@ -3,10 +3,10 @@
 This repo contains the code and results of the AAAI 2020 paper:
 
 <i><b>Towards Ghost-free Shadow Removal via <br> Dual Hierarchical Aggregation Network and Shadow Matting GAN</b></i><br>
-[Xiaodong Cun](vinthony.github.io), [Chi-Man Pun<sup>*</sup>](http://www.cis.umac.mo/~cmpun/), Cheng Shi <br>
+[Xiaodong Cun](http://vinthony.github.io), [Chi-Man Pun<sup>*</sup>](http://www.cis.umac.mo/~cmpun/), Cheng Shi <br>
 [University of Macau](http://um.edu.mo/)
 
-[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | Paper | Supp. | Poster | [Online Comparsion]()
+[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | [Paper](https://arxiv.org/abs/1911.08718) | Supp. | Poster | [🔥Online Demo!(Google CoLab)](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
 ![remove_detail](https://user-images.githubusercontent.com/4397546/69003615-582b2180-0940-11ea-9faa-2f2ae6b1d5ba.png)
 
@@ -16,7 +16,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 <p style="text-align:justify"><i>Shadow removal is an essential task for scene understanding. Many studies consider only matching the image contents, which often causes two types of ghosts: color in-consistencies in shadow regions or artifacts on shadow boundaries. In this paper, we try to tackle these issues in two aspects. On the one hand, to carefully learn the border artifacts-free image, we propose a novel network structure named the Dual Hierarchically Aggregation Network(DHAN). It contains a series of growth dilated convolutions as the backbone without any down-samplings, and we hierarchically aggregate multi-context features for attention and prediction respectively. On the other hand, we argue that training on a limited dataset restricts the textural understanding of the network, which leads to the shadow region color in-consistencies. Currently, the largest dataset contains 2k+ shadow/shadow-free images in pairs. However, it has only 0.1k+ unique scenes since many samples share exactly the same background with different shadow positions. Thus, we design a Shadow Matting Generative Adversarial Network~(SMGAN) to synthesize realistic shadow mattings from a given shadow mask and shadow-free image. With the help of novel masks or scenes, we enhance the current datasets using synthesized shadow images. Experiments show that our DHAN can erase the shadows and produce high-quality ghost-free images. After training on the synthesized and real datasets, our network outperforms other state-of-the-art methods by a large margin. </i></p>
 
 
-## **Our Resources**
+## **Resources**
 
 - Pre-trained Models: <b>[SRD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EVjCDVbv4AhAsco1IqCTCnoBMVJt-f6pIFU603G0EEZ5CA?e=DDvg2v) | [SRD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EXoaeGxsGMRMsnCs25_4Z4wB2XKlSY7q-LlF5d3kFvU2eg?e=a3VrLy) | 
 [ISTD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EdGF_2nSCZdMgbL0cz4aCt4BvEtAZ0xNsy81rloxJy5m7g?e=orI9i1) | 
@@ -54,6 +54,7 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 
 It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU are supported (But running on CPU is quite slow).
 
+OR an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
 
 ## **Training (TBD)**
