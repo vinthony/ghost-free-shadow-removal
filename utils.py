@@ -124,4 +124,13 @@ def compute_percep_loss(input, output, reuse=False, vgg_19_path='None'):
     p5=compute_l1_loss(vgg_real['conv5_2'],vgg_fake['conv5_2'])*10/1.5
     return p0+p1+p2+p3+p4+p5
 
+def parpare_image_fake_generator(val_path,im_mask_path,sz=(640,480)):
+
+  imw,imh = sz
+  immask  = encode_image(im_mask_path,(imw,imh))
+  imshadowfree = encode_image(val_path,(imw,imh))
+
+  imshadowfree,immask = [expand(x) for x in (imshadowfree,immask) ]
+  
+  return imshadowfree,immask
 

@@ -252,3 +252,58 @@ def build_discriminator(discrim_inputs,discrim_targets):
         layers.append(output)
 
     return layers[-1],layers
+
+
+def instance_norm(input, name="instance_norm"):
+    with tf.variable_scope(name):
+        depth = input.get_shape()[3]
+        scale = tf.get_variable("scale", [depth], initializer=tf.random_normal_initializer(1.0, 0.02, dtype=tf.float32))
+        offset = tf.get_variable("offset", [depth], initializer=tf.constant_initializer(0.0))
+        mean, variance = tf.nn.moments(input, axes=[1,2], keep_dims=True)
+        epsilon = 1e-5
+        inv = tf.rsqrt(variance + epsilon)
+        normalized = (input-mean)*inv
+        return scale*normalized + offset
+
+def conv2d(input_, output_dim, ks=4, s=2, stddev=0.02, padding='SAME', name="conv2d"):
+    with tf.variable_scope(name):
+        return slim.conv2d(input_, output_dim, ks, s, padding=padding, activation_fn=None,
+                            weights_initializer=tf.truncated_normal_initializer(stddev=stddev),
+                            biases_initializer=None)
+
+def deconv2d(input_, output_dim, ks=4, s=2, stddev=0.02, name="deconv2d"):
+    with tf.variable_scope(name):
+        return slim.conv2d_transpose(input_, output_dim, ks, s, padding='SAME', activation_fn=None,
+                                    weights_initializer=tf.truncated_normal_initializer(stddev=stddev),
+                                    biases_initializer=None)
+
+def residule_block(x, dim, ks=3, s=1, name='res'):
+    p = int((ks - 1) / 2)
+    y = tf.pad(x, [[0, 0], [p, p], [p, p], [0, 0]], "REFLECT")
+    y = instance_norm(conv2d(y, dim, ks, s, padding='VALID', name=name+'_c1'), name+'_bn1')
+    y = tf.pad(tf.nn.relu(y), [[0, 0], [p, p], [p, p], [0, 0]], "REFLECT")
+    y = instance_norm(conv2d(y, dim, ks, s, padding='VALID', name=name+'_c2'), name+'_bn2')
+    return y + x
+
+def build_shadow_generator(input,channel=64):
+    c0 = tf.pad(input, [[0, 0], [3, 3], [3, 3], [0, 0]], "REFLECT")
+    c1 = tf.nn.relu(instance_norm(conv2d(c0, channel, 7, 1, padding='VALID', name='g_e1_c'), 'g_e1_bn'))
+    c2 = tf.nn.relu(instance_norm(conv2d(c1, channel*2, 3, 2, name='g_e2_c'), 'g_e2_bn'))
+    c3 = tf.nn.relu(instance_norm(conv2d(c2, channel*4, 3, 2, name='g_e3_c'), 'g_e3_bn'))
+    r1 = residule_block(c3, channel*4, name='g_r1')
+    r2 = residule_block(r1, channel*4, name='g_r2')
+    r3 = residule_block(r2, channel*4, name='g_r3')
+    r4 = residule_block(r3, channel*4, name='g_r4')
+    r5 = residule_block(r4, channel*4, name='g_r5')
+    r6 = residule_block(r5, channel*4, name='g_r6')
+    r7 = residule_block(r6, channel*4, name='g_r7')
+    r8 = residule_block(r7, channel*4, name='g_r8')
+    r9 = residule_block(r8, channel*4, name='g_r9')
+
+    d1 = deconv2d(r9, channel*2, 3, 2, name='g_d1_dc')
+    d1 = tf.nn.relu(instance_norm(d1, 'g_d1_bn'))
+    d2 = deconv2d(d1, channel, 3, 2, name='g_d2_dc')
+    d2 = tf.nn.relu(instance_norm(d2, 'g_d2_bn'))
+    d2 = tf.pad(d2, [[0, 0], [3, 3], [3, 3], [0, 0]], "REFLECT")
+    pred = conv2d(d2, 3, 7, 1, padding='VALID', name='g_pred_c')
+    return pred

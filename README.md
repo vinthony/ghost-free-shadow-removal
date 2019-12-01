@@ -15,6 +15,11 @@ This repo contains the code and results of the AAAI 2020 paper:
 ## **Introduction**
 <p style="text-align:justify"><i>Shadow removal is an essential task for scene understanding. Many studies consider only matching the image contents, which often causes two types of ghosts: color in-consistencies in shadow regions or artifacts on shadow boundaries. In this paper, we try to tackle these issues in two aspects. On the one hand, to carefully learn the border artifacts-free image, we propose a novel network structure named the Dual Hierarchically Aggregation Network(DHAN). It contains a series of growth dilated convolutions as the backbone without any down-samplings, and we hierarchically aggregate multi-context features for attention and prediction respectively. On the other hand, we argue that training on a limited dataset restricts the textural understanding of the network, which leads to the shadow region color in-consistencies. Currently, the largest dataset contains 2k+ shadow/shadow-free images in pairs. However, it has only 0.1k+ unique scenes since many samples share exactly the same background with different shadow positions. Thus, we design a Shadow Matting Generative Adversarial Network~(SMGAN) to synthesize realistic shadow mattings from a given shadow mask and shadow-free image. With the help of novel masks or scenes, we enhance the current datasets using synthesized shadow images. Experiments show that our DHAN can erase the shadows and produce high-quality ghost-free images. After training on the synthesized and real datasets, our network outperforms other state-of-the-art methods by a large margin. </i></p>
 
+## Sample Comparsion
+![fig1857_5](https://user-images.githubusercontent.com/4397546/69911139-dbc13400-1451-11ea-8c1b-3b587b4f8727.png)
+
+<i>Comparison on the shadow removal datasets, The ﬁrst two samples are from ISTD dataset while the bottom two samples are from SRD dataset. In (d), the top two samples are from ST-CGAN and the bottom two samples are from DeShadowNet.</i>
+
 
 ## **Resources**
 
@@ -56,12 +61,33 @@ It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU ar
 
 OR an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
-
 ## **Training**
+The data folders should be:
+```
+ISTD_DATA_ROOT
+    * train
+        - train_A # shadow image
+        - train_B # shadow mask
+        - train_C # shadowfree image
+        - shadow_free # USR shadowfree images
+        - train_shadow_free # our Syn. shadow
+    * test
+        - test_A # shadow image
+        - test_B # shadow mask
+        - test_C # shadowfree image
+
+```
 ### 1. Generating Synthesized Shadow
+Downloading the `ISTD` from the source, download the USR dataset and unzip it into unzip it into  `$YOUR_DATA_ROOT/ISTD_dataset/train/`. Train the GAN by:
+```
+python train_ss.py \
+--task YOUR_TASK_NAME \
+--data_dir $YOUR_DATA_ROOT/ISTD_dataset/train/ \
+--use_gpu 0 # <0 for CPU \
+--is_training 1 # 0 for testing \
+```
 ### 2. Training on the ISTD dataset
 Downloading the `ISTD` from the source, download our synthesized dataset and unzip it into  `$YOUR_DATA_ROOT/ISTD_dataset/train/`. Train the network by:
-
 ```
 python train_sr.py \
 --task YOUR_TASK_NAME \
@@ -72,7 +98,7 @@ python train_sr.py \
 ```
 ### 3. Training on SRD dataset [todo]
 
-### 4. Test
+## **Test**
 ```
 python train_sr.py \
 --task YOUR_TASK_NAME # path to the pre-trained model [logs/YOUR_TASK_NAME] \
