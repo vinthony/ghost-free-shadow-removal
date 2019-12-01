@@ -60,7 +60,7 @@ OR an online demo is hosted in Google CoLab by [this url](https://colab.research
 ## **Training**
 ### 1. Generating Synthesized Shadow
 ### 2. Training on the ISTD dataset
-Downloading the `ISTD` from the source, download our synthesized dataset and unzip it into  `ISTD/train`. Train the network by:
+Downloading the `ISTD` from the source, download our synthesized dataset and unzip it into  `$YOUR_DATA_ROOT/ISTD_dataset/train/`. Train the network by:
 
 ```
 python train_sr.py \
@@ -91,11 +91,13 @@ Part of the code is based upon [FastImageProcessing](https://github.com/CQFIO/Fa
 If you find our work useful in your research, please consider citing:
 
 ```
-@inproceedings{cun2020shadow,
-    author = {Xiaodong, Cun and Chi-Man, Pun and Cheng Shi},
-    title = {Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN},
-    booktitle = {Proceedings of the AAAI},
-    year = {2020}
+@misc{cun2019ghostfree,
+    title={Towards Ghost-free Shadow Removal via Dual Hierarchical Aggregation Network and Shadow Matting GAN},
+    author={Xiaodong Cun and Chi-Man Pun and Cheng Shi},
+    year={2019},
+    eprint={1911.08718},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
 
