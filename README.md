@@ -57,14 +57,28 @@ It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU ar
 OR an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
 
-## **Training (TBD)**
+## **Training**
+### 1. Generating Synthesized Shadow
+### 2. Training on the ISTD dataset
+Downloading the `ISTD` from the source, download our synthesized dataset and unzip it into  `ISTD/train`. Train the network by:
 
 ```
-1. Generating Synthesized Shadow
+python train_sr.py \
+--task YOUR_TASK_NAME \
+--data_dir $YOUR_DATA_ROOT/ISTD_dataset/train/ \
+--use_gpu 1 # <0 for cpu \
+--is_training 1 # 0 for testing \
+--use_da 0.5 # the percentage of synthesized dataset
+```
+### 3. Training on SRD dataset [todo]
 
-2. Training on the ISTD/SRD dataset
-
-3. Syn. Shadow as Data Augmentation
+### 4. Test
+```
+python train_sr.py \
+--task YOUR_TASK_NAME # path to the pre-trained model [logs/YOUR_TASK_NAME] \
+--data_dir $YOUR_DATA_ROOT/ISTD_dataset/test/ \
+--use_gpu 1 # <0 for cpu \
+--is_training 0 # 0 for testing \
 ```
 
 ## **Acknowledgements**
