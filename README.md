@@ -6,7 +6,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 [Xiaodong Cun](http://vinthony.github.io), [Chi-Man Pun<sup>*</sup>](http://www.cis.umac.mo/~cmpun/), Cheng Shi <br>
 [University of Macau](http://um.edu.mo/)
 
-[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | [Paper](https://arxiv.org/abs/1911.08718) | Supp. | Poster | [🔥Online Demo!(Google CoLab)](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+[Syn. Datasets](#Resources) | [Models](#Resources) | [Results](#Resources) | [Paper](https://arxiv.org/abs/1911.08718) | [Supp.](https://github.com/vinthony/academicpages.github.io/blob/master/images/ghost-free-shadow-removal-supp.pdf) | Poster | [🔥Online Demo!(Google CoLab)](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
 
 ![remove_detail](https://user-images.githubusercontent.com/4397546/69003615-582b2180-0940-11ea-9faa-2f2ae6b1d5ba.png)
 
