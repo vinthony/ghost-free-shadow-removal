@@ -75,6 +75,7 @@ def se_block(input_feature, name, ratio=8):
     return scale
 
 def build_vgg19(input,vgg_path,reuse=False):
+    vgg_path=scipy.io.loadmat(vgg_path)
     with tf.variable_scope("vgg19"):
         if reuse:
             tf.get_variable_scope().reuse_variables()
