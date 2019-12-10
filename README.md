@@ -31,7 +31,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 [SRD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EeBoBAhnCMpClEW5Wb-MY88BgzTQYf7-hDCnNrfmX_zevg?e=xu8AEh) | 
 [SRD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYLodBImcw1AlfQZsh71HuYB_TalzP0uTBEtS-9atEdc_Q?e=DODEKk) | 
 [ISTD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EQgDUC1d_BpFg7SCRDCAlTkBRDeKeATnbwYvVMCdkpWRBw?e=kxyrAE) | 
-[ISTD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/ERvQFx8d8AxLmrafMi609nMBYGx9206dlVb5og2Sy0m90A?e=SOrO0R) </b>
+[ISTD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/ERvQFx8d8AxLmrafMi609nMBo7JnsV4a4s63FV_NP89_eA) </b>
 
 - Results on Shadow Detection: <b> 
 [SBU](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYByu0IMTQFHl__lK7GA1DAB0crwq0i49SIVLcdQWmnq_w?e=XO5OHg) | 
