@@ -4,7 +4,6 @@ import tensorflow as tf
 import tensorflow.contrib.slim as slim
 import numpy as np
 import matplotlib.pyplot as plt
-from discriminator import build_discriminator
 from skimage.measure import compare_ssim as ssim
 from skimage.measure import compare_psnr as psnr
 from networks import *
@@ -131,12 +130,12 @@ if is_training:
                 if cnt%2==0:
                     fetch_list=[d_opt]
                     # update D
-                    _=sess.run(fetch_list,feed_dict={input:iminput,target:imtarget,mask:maskgt})
+                    _=sess.run(fetch_list,feed_dict={input:imtarget,target:iminput,mask:maskgt})
 
                 # update G                
                 fetch_list=[g_opt,shadowed_image,d_loss,g_loss,loss,loss_percep]
                 _,imoutput,current_d,current_g,current,current_percep=\
-                    sess.run(fetch_list,feed_dict={input:iminput,target:imtarget,mask:maskgt})
+                    sess.run(fetch_list,feed_dict={input:imtarget,target:iminput,mask:maskgt})
 
                 all_l[id]=current
                 all_percep[id]=current_percep
