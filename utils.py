@@ -4,7 +4,6 @@ import numpy as np
 import os,time,cv2,scipy.io,random
 from PIL import Image
 from PIL import ImageEnhance,ImageFilter
-import pydensecrf.densecrf as dcrf
 from networks import build_vgg19
 
 
