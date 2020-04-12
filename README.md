@@ -73,11 +73,23 @@ ISTD_DATA_ROOT
         - train_B # shadow mask
         - train_C # shadowfree image
         - shadow_free # USR shadowfree images
-        - train_shadow_free # our Syn. shadow
+        - synC # our Syn. shadow
     * test
         - test_A # shadow image
         - test_B # shadow mask
         - test_C # shadowfree image
+
+SRD_DATA_ROOT
+    * train
+        - train_A # renaming the original `shadow` folder in `SRD`.
+        - train_B # the extracted shadow mask by ourself.
+        - train_C # renaming the original `shadow_free` folder in `SRD`.
+        - shadow_free # USR shadowfree images
+        - synC # our Syn. shadow
+    * test
+        - train_A # renaming the original `shadow` folder in `SRD`.
+        - train_B # the extracted shadow mask by ourself.
+        - train_C # renaming the original `shadow_free` folder in `SRD`.
 
 ```
 ### 1. Generating Synthesized Shadow
@@ -85,7 +97,7 @@ Downloading the `ISTD` from the source, download the USR dataset and unzip it in
 ```
 python train_ss.py \
 --task YOUR_TASK_NAME \
---data_dir $YOUR_DATA_ROOT/ISTD_dataset/train/ \
+--data_dir $YOUR_DATA_ROOT/$ISTD_DATASET_ROOT/train/ \
 --use_gpu 0 # <0 for CPU \
 --is_training 1 # 0 for testing \
 ```
@@ -94,20 +106,38 @@ Downloading the `ISTD` from the source, download our synthesized dataset and unz
 ```
 python train_sr.py \
 --task YOUR_TASK_NAME \
---data_dir $YOUR_DATA_ROOT/ISTD_dataset/train/ \
+--data_dir $YOUR_DATA_ROOT/$ISTD_DATASET_ROOT/train/ \
 --use_gpu 1 # <0 for cpu \
 --is_training 1 # 0 for testing \
 --use_da 0.5 # the percentage of synthesized dataset
 ```
-### 3. Training on SRD dataset [todo]
+### 3. Training on SRD dataset 
+Download and unzip the `SRD` dataset from source. Reorganizing the dataset as described above. 
+```
+python train_sr.py \
+--task YOUR_TASK_NAME \
+--data_dir $YOUR_DATA_ROOT/$SRD_DATASET_ROOT/train/ \
+--use_gpu 1 # <0 for cpu \
+--is_training 1 # 0 for testing \
+--use_da 0.5 # the percentage of synthesized dataset
+```
 
 ## **Test**
 ```
+# ISTD DATASET
 python train_sr.py \
 --task YOUR_TASK_NAME # path to the pre-trained model [logs/YOUR_TASK_NAME] \
---data_dir $YOUR_DATA_ROOT/ISTD_dataset/test/ \
+--data_dir $YOUR_DATA_ROOT/$ISTD_DATASET_ROOT/test/ \
 --use_gpu 1 # <0 for cpu \
 --is_training 0 # 0 for testing \
+
+# SRD DATASET
+python train_sr.py \
+--task YOUR_TASK_NAME # path to the pre-trained model [logs/YOUR_TASK_NAME] \
+--data_dir $YOUR_DATA_ROOT/$SRD_DATASET_ROOT/test/ \
+--use_gpu 1 # <0 for cpu \
+--is_training 0 # 0 for testing \
+
 ```
 
 ## **Acknowledgements**

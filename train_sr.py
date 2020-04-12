@@ -102,7 +102,7 @@ sys.stdout.flush()
 if is_training:
     # please follow the dataset directory setup in README
     input_images_path=prepare_data(train_real_root,stage=['train_A']) # no reflection ground truth for real images
-    syn_images=prepare_data(train_real_root,stage=['synC_shadow_free'])
+    syn_images=prepare_data(train_real_root,stage=['synC'])
 
     print("[i] Total %d training images, first path of real image is %s." % (len(input_images_path), input_images_path[0]))
     
@@ -133,7 +133,7 @@ if is_training:
                 if magic < ARGS.use_da: #choose from fake images
                     is_syn = True
                     current_img_id = random.sample(syn_images,1)[0]
-                    iminput,imtarget,maskgt = parpare_image_syn(current_img_id,(neww,newh),da=True,stage='synC_shadow_free')
+                    iminput,imtarget,maskgt = parpare_image_syn(current_img_id,(neww,newh),da=True,stage='synC')
                 else:
                     is_syn = False
                     current_img_id = input_images_path[_id]
