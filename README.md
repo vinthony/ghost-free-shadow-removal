@@ -169,3 +169,5 @@ Zhang, Xuaner, Ren Ng, and Qifeng Chen. "[Single Image Reflection Separation wit
 
 
 Hu, Xiaowei, et al. "[Mask-ShadowGAN: Learning to Remove Shadows from Unpaired Data](https://arxiv.org/abs/1903.10683)." Proceedings of the ICCV (2019).
+
+[![HitCount](http://hits.dwyl.com/vinthony/ghost-free-shadow-removal.svg)](http://hits.dwyl.com/vinthony/ghost-free-shadow-removal)
