@@ -43,6 +43,10 @@ This repo contains the code and results of the AAAI 2020 paper:
 - Training on ISTD dataset and generating shadow using USR dataset: <b> 
 [Syn. Shadow](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EW8-rjV5MX5BtoNSoDuzQg8B2lk4QHZS9jZzDDPfrEZVfg?e=DxPVfR) </b>
 
+- Extracted Shadow Mask in SRD dataset:<b>
+[SRD Mask](https://uofmacau-my.sharepoint.com/personal/yb87432_umac_mo/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval%2Fsrd%5Fmask%2Ezip&parent=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval&originalPath=aHR0cHM6Ly91b2ZtYWNhdS1teS5zaGFyZXBvaW50LmNvbS86dTovZy9wZXJzb25hbC95Yjg3NDMyX3VtYWNfbW8vRVo4Q2lJaE5BRGxBa0E0RmhpbV9RemdCZkRlSTdxZFVydDZ3djJFVnhaU2Mydz9ydGltZT1CQTMyUENqMDEwZw)
+</b>
+
 ## **Other Resources**
 
 - [ISTD dataset](https://github.com/DeepInsight-PCALab/ST-CGAN)
