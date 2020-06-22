@@ -59,6 +59,7 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 
 ## **Demo**
 
+#### 1. Local ipynb demo
 1. download the pre-trained model from above. **SRD+** is recommanded.
 2. download pretrained-vgg19 from [MatConvNet](http://www.vlfeat.org/matconvnet/pretrained/#downloading-the-pre-trained-models).
 3. Uncompress pretrained models into 'Models/' as shown in the folders.
@@ -66,7 +67,14 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 
 It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU are supported (But running on CPU is quite slow).
 
-OR an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+#### 2. Online google colab demo
+an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+
+#### 3. Demo from command line (Thanks [@aliericcantona](https://github.com/aliericcantona))
+
+```
+python demo.py --model PATH_TO_PRETRAINED_MODEL --vgg_19_path PATH_TO_VGG19 --input_dir SAMPLES_DIR --output_dir RESULTS_DIR
+```
 
 ## **Training**
 The data folders should be:
