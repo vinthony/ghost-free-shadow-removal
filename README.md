@@ -2,7 +2,7 @@
 
 This repo contains the code and results of the AAAI 2020 paper:
 
-<i><b>Towards Ghost-free Shadow Removal via <br> Dual Hierarchical Aggregation Network and Shadow Matting GAN</b></i><br>
+<i><b> [Towards Ghost-free Shadow Removal via <br> Dual Hierarchical Aggregation Network and Shadow Matting GAN ](https://arxiv.org/abs/1911.08718)</b></i><br>
 [Xiaodong Cun](http://vinthony.github.io), [Chi-Man Pun<sup>*</sup>](http://www.cis.umac.mo/~cmpun/), Cheng Shi <br>
 [University of Macau](http://um.edu.mo/)
 
