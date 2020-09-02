@@ -10,10 +10,10 @@ This repo contains the code and results of the AAAI 2020 paper:
 
 <img width='100%' src='https://user-images.githubusercontent.com/4397546/69003615-582b2180-0940-11ea-9faa-2f2ae6b1d5ba.png'/>
 
-<i>We plot a result of our model with the input shown in yellow square. From two zoomed regions, our method removes the shadow and reduces the ghost successfully.</i>
+<i>We plot a result of our model with the input shown in the yellow square. From two zoomed regions, our method removes the shadow and reduces the ghost successfully.</i>
 
 ## Known Issues
-[#4](https://github.com/vinthony/ghost-free-shadow-removal/issues/4) inconstency between the code and Figure.2, Thanks [@naoto0804](https://github.com/naoto0804)
+[#4](https://github.com/vinthony/ghost-free-shadow-removal/issues/4) inconsistency between the code and Figure.2, Thanks [@naoto0804](https://github.com/naoto0804)
 
 ## **Introduction**
 <p style="text-align:justify"><i>Shadow removal is an essential task for scene understanding. Many studies consider only matching the image contents, which often causes two types of ghosts: color in-consistencies in shadow regions or artifacts on shadow boundaries. In this paper, we try to tackle these issues in two aspects. On the one hand, to carefully learn the border artifacts-free image, we propose a novel network structure named the Dual Hierarchically Aggregation Network(DHAN). It contains a series of growth dilated convolutions as the backbone without any down-samplings, and we hierarchically aggregate multi-context features for attention and prediction respectively. On the other hand, we argue that training on a limited dataset restricts the textural understanding of the network, which leads to the shadow region color in-consistencies. Currently, the largest dataset contains 2k+ shadow/shadow-free images in pairs. However, it has only 0.1k+ unique scenes since many samples share exactly the same background with different shadow positions. Thus, we design a Shadow Matting Generative Adversarial Network~(SMGAN) to synthesize realistic shadow mattings from a given shadow mask and shadow-free image. With the help of novel masks or scenes, we enhance the current datasets using synthesized shadow images. Experiments show that our DHAN can erase the shadows and produce high-quality ghost-free images. After training on the synthesized and real datasets, our network outperforms other state-of-the-art methods by a large margin. </i></p>
@@ -44,7 +44,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 [Syn. Shadow](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EW8-rjV5MX5BtoNSoDuzQg8B2lk4QHZS9jZzDDPfrEZVfg?e=DxPVfR) </b>
 
 - Extracted Shadow Mask in SRD dataset:<b>
-[SRD Mask](https://uofmacau-my.sharepoint.com/personal/yb87432_umac_mo/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval%2Fsrd%5Fmask%2Ezip&parent=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval&originalPath=aHR0cHM6Ly91b2ZtYWNhdS1teS5zaGFyZXBvaW50LmNvbS86dTovZy9wZXJzb25hbC95Yjg3NDMyX3VtYWNfbW8vRVo4Q2lJaE5BRGxBa0E0RmhpbV9RemdCZkRlSTdxZFVydDZ3djJFVnhaU2Mydz9ydGltZT1CQTMyUENqMDEwZw)
+[SRD Mask](https://uofmacau-my.sharepoint.com/personal/yb87432_umac_mo/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval%2Fsrd%5Fmask%2Ezip&parent=%2Fpersonal%2Fyb87432%5Fumac%5Fmo%2FDocuments%2Fghost%2Dfree%2Dshadow%2Dremoval)
 </b>
 
 ## **Other Resources**
@@ -60,9 +60,9 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 ## **Demo**
 
 #### 1. Local ipynb demo
-1. download the pre-trained model from above. **SRD+** is recommanded.
+1. download the pre-trained model from above. **SRD+** is recommended.
 2. download pretrained-vgg19 from [MatConvNet](http://www.vlfeat.org/matconvnet/pretrained/#downloading-the-pre-trained-models).
-3. Uncompress pretrained models into 'Models/' as shown in the folders.
+3. Uncompress pre-trained models into 'Models/' as shown in the folders.
 4. Starting a [jupyter](https://jupyter.org/) server and run the demo code following the instructions in `demo.ipynb`
 
 It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU are supported (But running on CPU is quite slow).
@@ -124,7 +124,7 @@ python train_sr.py \
 --use_da 0.5 # the percentage of synthesized dataset
 ```
 ### 3. Training on SRD dataset 
-Download and unzip the `SRD` dataset from source. Reorganizing the dataset as described above. 
+Download and unzip the `SRD` dataset from the source. Reorganizing the dataset as described above. 
 ```
 python train_sr.py \
 --task YOUR_TASK_NAME \
