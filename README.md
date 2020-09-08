@@ -73,7 +73,7 @@ an online demo is hosted in Google CoLab by [this url](https://colab.research.go
 #### 3. Demo from command line (Thanks [@aliericcantona](https://github.com/aliericcantona))
 
 ```
-python demo.py --model PATH_TO_PRETRAINED_MODEL --vgg_19_path PATH_TO_VGG19 --input_dir SAMPLES_DIR --output_dir RESULTS_DIR
+python demo.py --model PATH_TO_PRETRAINED_MODEL --vgg_19_path PATH_TO_VGG19 --input_dir SAMPLES_DIR --result_dir RESULTS_DIR
 ```
 
 ## **Training**
