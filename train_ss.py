@@ -29,6 +29,7 @@ current_best = 0
 maxepoch=101
 EPS = 1e-12
 channel = 64 # number of feature channels to build the model, set to 64
+vgg_19_path = scipy.io.loadmat('./Models/imagenet-vgg-verydeep-19.mat')
 
 train_w,train_h = 256,256
 test_w,test_h = 640,480
@@ -53,7 +54,7 @@ with tf.variable_scope(tf.get_variable_scope()):
     shadowed_image = build_shadow_generator(tf.concat([input,mask],axis=3),channel) * input
 
     # Perceptual Loss
-    loss_percep = compute_percep_loss(shadowed_image, target)
+    loss_percep = compute_percep_loss(shadowed_image, target, vgg_19_path=vgg_19_path)
     # Adversarial Loss
     with tf.variable_scope("discriminator"):
         predict_real,pred_real_dict = build_discriminator(input,target)
