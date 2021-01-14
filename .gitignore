@@ -4,3 +4,5 @@ Models/*/*.*
 __pycache__/
 .vscode
 *.zip
+
+Models/*
