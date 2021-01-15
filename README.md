@@ -41,11 +41,13 @@ This repo contains the code and results of the AAAI 2020 paper:
 [SBU+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EQMCyGNUo3xJg8fInF7LWQAB0g9HFZHRBuBoxlzEL5CNUg?e=ENfsZV) </b>
 
 - Training on ISTD dataset and generating shadow using USR dataset: <b> 
-[Syn. Shadow](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EW8-rjV5MX5BtoNSoDuzQg8B2lk4QHZS9jZzDDPfrEZVfg?e=DxPVfR) </b>
+[Syn. Shadow](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EW8-rjV5MX5BtoNSoDuzQg8B2lk4QHZS9jZzDDPfrEZVfg?e=DxPVfR) |
+[Pre-trained Model (re-trained)](https://drive.google.com/file/d/1Mlq4rQAj9jGiomrbQzjKuyHiVI8tgIhw/view?usp=sharing) </b>
 
 - Extracted Shadow Mask in SRD dataset:<b>
 [SRD Mask](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EZ8CiIhNADlAkA4Fhim_QzgBfDeI7qdUrt6wv2EVxZSc2w?e=hobVMf)
 </b>
+
 
 ## **Other Resources**
 
@@ -68,7 +70,10 @@ Creating the conda environments following [here](https://github.com/ceciliavisio
 It has been tested both in MacOS 10.15 and Ubuntu 18.04 LTS. Both CPU and GPU are supported (But running on CPU is quite slow).
 
 #### 2. Online google colab demo
-an online demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+
+an online **shadow removal** demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq)
+
+an online **shadow synthesis** demo is hosted in Google CoLab by [this url](https://colab.research.google.com/drive/1WGtsxKxogxgusFJhLJMjM8ZpMsVYjuDg#scrollTo=SxF4uQHmEiv0)
 
 #### 3. Demo from command line (Thanks [@aliericcantona](https://github.com/aliericcantona))
 
