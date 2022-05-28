@@ -29,7 +29,7 @@ current_best = 0
 maxepoch=101
 EPS = 1e-12
 channel = 64 # number of feature channels to build the model, set to 64
-vgg_19_path = scipy.io.loadmat('./Models/imagenet-vgg-verydeep-19.mat')
+vgg_19_path = './Models/imagenet-vgg-verydeep-19.mat'
 
 train_w,train_h = 256,256
 test_w,test_h = 640,480
