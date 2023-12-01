@@ -15,13 +15,16 @@ This repo contains the code and results of the AAAI 2020 paper:
 ## Known Issues
 [#4](https://github.com/vinthony/ghost-free-shadow-removal/issues/4) inconsistency between the code and Figure.2, Thanks [@naoto0804](https://github.com/naoto0804)
 
+SOME LINKS ARE BROKEN, I will try to recover it soon.
+
+
 ## **Introduction**
 <p style="text-align:justify"><i>Shadow removal is an essential task for scene understanding. Many studies consider only matching the image contents, which often causes two types of ghosts: color in-consistencies in shadow regions or artifacts on shadow boundaries. In this paper, we try to tackle these issues in two aspects. On the one hand, to carefully learn the border artifacts-free image, we propose a novel network structure named the Dual Hierarchically Aggregation Network(DHAN). It contains a series of growth dilated convolutions as the backbone without any down-samplings, and we hierarchically aggregate multi-context features for attention and prediction respectively. On the other hand, we argue that training on a limited dataset restricts the textural understanding of the network, which leads to the shadow region color in-consistencies. Currently, the largest dataset contains 2k+ shadow/shadow-free images in pairs. However, it has only 0.1k+ unique scenes since many samples share exactly the same background with different shadow positions. Thus, we design a Shadow Matting Generative Adversarial Network~(SMGAN) to synthesize realistic shadow mattings from a given shadow mask and shadow-free image. With the help of novel masks or scenes, we enhance the current datasets using synthesized shadow images. Experiments show that our DHAN can erase the shadows and produce high-quality ghost-free images. After training on the synthesized and real datasets, our network outperforms other state-of-the-art methods by a large margin. </i></p>
 
-## Sample Comparsion
+## Sample Comparison
 ![fig1857_5](https://user-images.githubusercontent.com/4397546/69911139-dbc13400-1451-11ea-8c1b-3b587b4f8727.png)
 
-<i>Comparison on the shadow removal datasets, The ﬁrst two samples are from ISTD dataset while the bottom two samples are from SRD dataset. In (d), the top two samples are from ST-CGAN and the bottom two samples are from DeShadowNet.</i>
+<i>Comparison of the shadow removal datasets, The first two samples are from the ISTD dataset while the bottom two samples are from the SRD dataset. In (d), the top two samples are from ST-CGAN and the bottom two samples are from DeShadowNet.</i>
 
 
 ## **Resources**
@@ -31,10 +34,10 @@ This repo contains the code and results of the AAAI 2020 paper:
 [ISTD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYfdWFETlmZNqFn2gaz4juEBy6E-Rgyz7JoyabEv4iJQkw?e=poA4Wa) </b>
 
 - Results on Shadow Removal: <b>
-[SRD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EeBoBAhnCMpClEW5Wb-MY88BgzTQYf7-hDCnNrfmX_zevg?e=xu8AEh) | 
+[SRD](https://drive.google.com/file/d/1CJ2UTDGWm0xJEflz9tW327XqMcSkEF_D/view?usp=drive_link) | 
 [SRD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYLodBImcw1AlfQZsh71HuYB_TalzP0uTBEtS-9atEdc_Q?e=DODEKk) | 
-[ISTD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EQgDUC1d_BpFg7SCRDCAlTkBRDeKeATnbwYvVMCdkpWRBw?e=kxyrAE) | 
-[ISTD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/ERvQFx8d8AxLmrafMi609nMBo7JnsV4a4s63FV_NP89_eA) </b>
+[ISTD](https://drive.google.com/file/d/1qoHVCuU4baRBhPVicNT6HVl4c4nJqiPw/view?usp=drive_link) | 
+[ISTD+](https://drive.google.com/file/d/14iqUPebhJ0mnMw26_w67jp0LZgsxf9LK/view?usp=drive_link) </b>
 
 - Results on Shadow Detection: <b> 
 [SBU](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYByu0IMTQFHl__lK7GA1DAB0crwq0i49SIVLcdQWmnq_w?e=XO5OHg) | 
