@@ -15,7 +15,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 ## Known Issues
 [#4](https://github.com/vinthony/ghost-free-shadow-removal/issues/4) inconsistency between the code and Figure.2, Thanks [@naoto0804](https://github.com/naoto0804)
 
-SOME LINKS ARE BROKEN, I will try to recover it soon.
+## SOME LINKS ARE BROKEN due to only OneDrive account, I will try to recover it soon.
 
 
 ## **Introduction**
@@ -29,7 +29,7 @@ SOME LINKS ARE BROKEN, I will try to recover it soon.
 
 ## **Resources**
 
-- Pre-trained Models: <b>[SRD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EVjCDVbv4AhAsco1IqCTCnoBMVJt-f6pIFU603G0EEZ5CA?e=DDvg2v) | [SRD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EXoaeGxsGMRMsnCs25_4Z4wB2XKlSY7q-LlF5d3kFvU2eg?e=a3VrLy) | 
+- Pre-trained Models: <b>[SRD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EVjCDVbv4AhAsco1IqCTCnoBMVJt-f6pIFU603G0EEZ5CA?e=DDvg2v) | [SRD+](https://drive.google.com/uc?id=1rEIWWLwEpbZGPyFUc9jSIQr78ZeQy5eZ) | 
 [ISTD](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EdGF_2nSCZdMgbL0cz4aCt4BvEtAZ0xNsy81rloxJy5m7g?e=orI9i1) | 
 [ISTD+](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EYfdWFETlmZNqFn2gaz4juEBy6E-Rgyz7JoyabEv4iJQkw?e=poA4Wa) </b>
 
@@ -56,7 +56,7 @@ SOME LINKS ARE BROKEN, I will try to recover it soon.
 
 - [ISTD dataset](https://github.com/DeepInsight-PCALab/ST-CGAN)
 - [USR: Unpaired Shadow Removal dataset](https://drive.google.com/open?id=1PPAX0W4eyfn1cUrb2aBefnbrmhB1htoJ)
-- SRD Dataset (please email the [authors](http://vision.sia.cn/our%20team/JiandongTian/JiandongTian.html) to get assess).
+- SRD Dataset (please email the [authors](http://vision.sia.cn/our%20team/JiandongTian/JiandongTian.html) to get an assessment).
 
 
 ## **Setup**
