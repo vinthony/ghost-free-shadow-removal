@@ -48,7 +48,7 @@ This repo contains the code and results of the AAAI 2020 paper:
 [Pre-trained Model (re-trained)](https://drive.google.com/file/d/1Mlq4rQAj9jGiomrbQzjKuyHiVI8tgIhw/view?usp=sharing) </b>
 
 - Extracted Shadow Mask in SRD dataset:<b>
-[SRD Mask](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_umac_mo/EZ8CiIhNADlAkA4Fhim_QzgBfDeI7qdUrt6wv2EVxZSc2w?e=hobVMf)
+[SRD Mask](https://uofmacau-my.sharepoint.com/:u:/g/personal/yb87432_um_edu_mo/EZ8CiIhNADlAkA4Fhim_QzgBfDeI7qdUrt6wv2EVxZSc2w?e=wSjVQT)
 </b>
 
 
